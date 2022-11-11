@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/book-stack.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Library</title>
+</head>
+<body>
+    <div class="main-container">
+        <img src="./images/book-stack.png" alt="books">
+        <div class="header">
+            <h1>Personal Library</h1>
+            <p class="description">
+                Keep track of the books you are reading or have already read. As you finish books you can switch them from not read to read. You can also delete books as you sell or give them away.  
+            </p>
+        </div>
+        <div class="book-container">
+            <!-- Simple form here 
+            One row with Book Author Status(read or not read) submit button -->
+            <form class="row gy-2 gx-3 align-items-center" id="form" name="form">
+                <div class="col-auto">
+                  <label class="" for="autoSizingInput">Book</label>
+                  <input type="text" class="form-control" id="title" >
+                </div>
+                <div class="col-auto">
+                  <label class="text-center" for="autoSizingInputGroup">Author</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="author">
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <label class="" for="autoSizingSelect">Status</label>
+                  <select class="form-select" id="read">
+                    <option selected></option>
+                    <option value="Read">Read</option>
+                    <option value="Not Read">Not Read</option>
+                  </select>
+                </div>
+                <div class="col-auto">
+                    <br>
+                  <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+        </div>
+        <div class="book-table">
+            <!-- Table with Name Author Status (delete button far right) -->
+
+            <table class="table" id="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Book</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Lord of The Rings</td>
+                    <td>J. R. R. Tolkien</td>
+                    <td><button type="button" class="btn btn-outline-dark readbtn" >Read</button>
+                    </td>
+                    <td><button type="button" class="btn btn-danger">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Harry Potter</td>
+                    <td>J. K. Rowling</td>
+                    <td><button type="button" class="btn btn-outline-dark readbtn">Read</button>
+                    </td>
+                    <td><button type="button" class="btn btn-danger">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Y.D.K.J.S.Y.</td>
+                    <td>Kyle Simpson</td>
+                    <td><button type="button" class="btn btn-outline-dark readbtn">Read</button>
+                    </td>
+                    <td><button type="button" class="btn btn-danger">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+
+        </div>
+        <footer>
+          <p>Created by <a href="https://github.com/Ky1e-codes" target="_blank">Ky1e Codes</a></p>
+        </footer>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
