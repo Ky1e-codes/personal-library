@@ -9,7 +9,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: center; */
     height: 100vh;
     overflow: hidden;
     margin: 0;
@@ -25,6 +24,11 @@ img {
 
 a {
     text-decoration: none;
+}
+
+#submit {
+    background-color: #4B97D3;
+    border: 2px solid rgb(244, 244, 244);
 }
 
 .book-container {
@@ -49,5 +53,4 @@ footer {
     display: flex;
     justify-content: center;
     align-content: flex-start;
-
 }

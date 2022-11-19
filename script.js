@@ -8,7 +8,7 @@ class Book {
         this.author = author;
         this.read = read;
 }
-}
+};
 
 // declared button using Id and created event handlers that run functions on click
 let button = document.getElementById('submit');
@@ -52,31 +52,27 @@ function addRow() {
         // Cell 3 should create a button with value from read
         cell3.innerHTML = `<button type="button" class="btn btn-outline-dark readbtn">${read}</button>`;
         // cell 4 should create a delete button
-        cell4.innerHTML = `<button type="button" class="btn btn-danger">Delete</button>`;
+        cell4.innerHTML = `<button type="button" class="btn btn-danger delete">Delete</button>`;
 
 };
 
 // toggle read buton 
-// got to work with one button using getelementsbyid
-// got to work with one button using queryselector and class
-// query selector all returns node list
+
+//push the new created row into the array you loop once it’s created
+
 
 let readButton = document.querySelectorAll('.readbtn');
 
+
 for(let i = 0; i < readButton.length; i++) {
-    readButton[i].onclick = btnToggle();
-    console.log(readButton)
+    readButton[i].addEventListener("click",btnToggle);
 };
 
-// readButton.addEventListener("click",btnToggle);
-
-function btnToggle() {   
-    if(readButton.innerHTML == 'Read') {
-        readButton.innerHTML = 'Not Read';
-    } else {
-        readButton.innerHTML = 'Read';
-    }
+function btnToggle(e) {   
+    if (e.target.innerHTML == "Read") {
+        return (e.target.innerHTML = "Not Read");
+      } else {
+        return (e.target.innerHTML = "Read");
+      }
 };
-
-
 
