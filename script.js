@@ -50,29 +50,32 @@ function addRow() {
         cell1.innerHTML = title;
         cell2.innerHTML = author;
         // Cell 3 should create a button with value from read
-        cell3.innerHTML = `<button type="button" class="btn btn-outline-dark readbtn">${read}</button>`;
+        cell3.innerHTML = `<button type="button" class="btn btn-outline-dark readbtn" onclick="btnToggle(event)" >${read}</button>`;
         // cell 4 should create a delete button
-        cell4.innerHTML = `<button type="button" class="btn btn-danger delete">Delete</button>`;
+        cell4.innerHTML = `<button type="button" class="btn btn-danger delete" onclick="delToggle(event)">Delete</button>`;
 
 };
 
-// toggle read buton 
-
-//push the new created row into the array you loop once it’s created
-
+// Toggle read buton 
+// Added
 
 let readButton = document.querySelectorAll('.readbtn');
-
+let deleteButton = document.querySelectorAll('.delete');
 
 for(let i = 0; i < readButton.length; i++) {
     readButton[i].addEventListener("click",btnToggle);
+    deleteButton[i].addEventListener("click",delToggle);
 };
 
-function btnToggle(e) {   
-    if (e.target.innerHTML == "Read") {
-        return (e.target.innerHTML = "Not Read");
+function btnToggle(event) {   
+    if (event.target.innerHTML == "Read") {
+        return (event.target.innerHTML = "Not Read");
       } else {
-        return (e.target.innerHTML = "Read");
+        return (event.target.innerHTML = "Read");
       }
 };
 
+// function for delete button
+function delToggle(event) {   
+    return (event.target.parentNode.parentNode.innerHTML = '');
+};
