@@ -15,7 +15,7 @@
         <div class="header">
             <h1>Personal Library</h1>
             <p class="description">
-                Keep track of the books you are reading or have already read. As you finish books you can switch them from not read to read. You can also delete books as you sell or give them away.  
+                Keep track of the books you are reading or have already read (in your library). As you finish books you can switch them from still reading to finished reading. You can also delete books as you sell or give them away (leave your library).  
             </p>
         </div>
         <div class="book-container">
@@ -35,9 +35,8 @@
                 <div class="col-auto">
                   <label class="" for="autoSizingSelect">Status</label>
                   <select class="form-select" id="read">
-                    <option selected></option>
-                    <option value="Read">Read</option>
-                    <option value="Not Read">Not Read</option>
+                    <option value="Still Reading">Still Reading</option>
+                    <option value="Finished Reading">Finished Reading</option>
                   </select>
                 </div>
                 <div class="col-auto">
@@ -62,7 +61,7 @@
                   <tr>
                     <td>Lord of The Rings</td>
                     <td>J. R. R. Tolkien</td>
-                    <td><button type="button" class="btn btn-outline-dark readbtn" >Read</button>
+                    <td><button type="button" class="btn btn-outline-dark readbtn" >Finished Reading</button>
                     </td>
                     <td><button type="button" class="btn btn-danger delete">Delete</button>
                     </td>
@@ -70,7 +69,7 @@
                   <tr>
                     <td>Harry Potter</td>
                     <td>J. K. Rowling</td>
-                    <td><button type="button" class="btn btn-outline-dark readbtn">Read</button>
+                    <td><button type="button" class="btn btn-outline-dark readbtn">Finished Reading</button>
                     </td>
                     <td><button type="button" class="btn btn-danger delete">Delete</button>
                     </td>
@@ -78,7 +77,7 @@
                   <tr>
                     <td>Y.D.K.J.S.Y.</td>
                     <td>Kyle Simpson</td>
-                    <td><button type="button" class="btn btn-outline-dark readbtn">Read</button>
+                    <td><button type="button" class="btn btn-outline-dark readbtn">Finished Reading</button>
                     </td>
                     <td><button type="button" class="btn btn-danger delete">Delete</button>
                     </td>

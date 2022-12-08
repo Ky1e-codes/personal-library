@@ -24,7 +24,7 @@ function addBookToLibrary(event) {
     let read = document.getElementById('read').value;
     
     const newBook = new Book(title, author, read);
-
+    
     myLibrary.push(newBook); 
 }
 
@@ -56,9 +56,7 @@ function addRow() {
 
 };
 
-// Toggle read buton 
-// Added
-
+// Toggle read buton / Status  
 let readButton = document.querySelectorAll('.readbtn');
 let deleteButton = document.querySelectorAll('.delete');
 
@@ -68,10 +66,10 @@ for(let i = 0; i < readButton.length; i++) {
 };
 
 function btnToggle(event) {   
-    if (event.target.innerHTML == "Read") {
-        return (event.target.innerHTML = "Not Read");
+    if (event.target.innerHTML == "Still Reading") {
+        return (event.target.innerHTML = "Finished Reading");
       } else {
-        return (event.target.innerHTML = "Read");
+        return (event.target.innerHTML = "Still Reading");
       }
 };
 
