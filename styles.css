@@ -26,6 +26,10 @@ a {
     text-decoration: none;
 }
 
+.description {
+    line-height: 2;
+}
+
 #submit {
     background-color: #4B97D3;
     border: 2px solid rgb(244, 244, 244);
